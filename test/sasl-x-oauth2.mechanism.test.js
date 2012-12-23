@@ -15,6 +15,10 @@
       expect(mech.name).to.equal('X-OAUTH2');
     });
     
+    it('should be client first', function() {
+      expect(mech.clientFirst).to.equal(true);
+    });
+    
     it('should encode credentials', function() {
       expect(mech.response({ username: 'janedoe', token: 's3cr2t' })).to.equal('\u0000janedoe\u0000s3cr2t');
     });
